@@ -1,5 +1,6 @@
 package mvcdemo;
 
+import java.util.Observable;
 import java.util.Scanner;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Scanner;
  * @author arnold
  *
  */
-public class KeyboardController {
+public class KeyboardController extends Observable {
 	public static void main(String[] args) {
 		// Create and hook up the Model, View and this controller
 

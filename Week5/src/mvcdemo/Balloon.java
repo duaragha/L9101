@@ -1,5 +1,8 @@
 package mvcdemo;
 
+import java.util.Observable;
+import java.util.Observer;
+
 // EXERCISE 1:
 // Modify the class below to act as an Observable (import and extend the appropriate class)
 // Balloon should notify its observers anytime it is inflated or popped
@@ -15,7 +18,7 @@ package mvcdemo;
  * A Balloon is popped if we add air that is beyond the capacity.
  * We can add air to the balloon only if it is not popped.
  */
-public class Balloon {
+public class Balloon implements Observer {
 
 	// See http://www.dofactory.com/net/observer-design-pattern
 	// https://docs.oracle.com/javase/8/docs/api/
@@ -162,6 +165,17 @@ public class Balloon {
 				 ", Capacity: " + this.capacity +
 				 ", Popped: " + this.isPopped;
 		return s;
+	}
+
+	public void addObserver(TextView view) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

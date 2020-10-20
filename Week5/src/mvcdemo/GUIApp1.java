@@ -1,5 +1,4 @@
 package mvcdemo;
-
 //EXERCISE 3: Complete this code to create a GUI controller -- do NOT modify the TextView or Balloon files at all
 
 import javafx.application.Application;
@@ -20,13 +19,14 @@ public class GUIApp1 extends Application {
 
 		// TODO: Create a TextView instance called "view"
 
-		
+		TextView view = new TextView();
 		
 		// TODO: Create two Balloon objects:
 		//			a Red balloon with 100 capacity called model_b1
 		//			a Green balloon with 200 capacity called model_b2
-
 		
+		Balloon model_b1 = new Balloon("Red", 100);
+		Balloon model_b2 = new Balloon("Green", 200);
 
 		// TODO: Make the "view" an observer of the two balloons above
 		
@@ -41,6 +41,10 @@ public class GUIApp1 extends Application {
 		// TODO: Create two buttons -- the labels for the button should be "Inflate" followed by model_b1.getColor()
 		//			for one button, and "Inflate" followed by model_b2.getColor() for the other button
 
+		Button inflateb1 = new Button("Inflate");
+		inflateb1.setOnAction(model_b1.getColor());
+		
+		Button inflateb2 = new Button("Inflate");
 		
 
 		// TODO: Add the two buttons to the "grid" layout pane at position (0, 0) for the first button and (0, 1) for the second
